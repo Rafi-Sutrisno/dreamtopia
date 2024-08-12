@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 let isConnect = false;
 
-export const connectToDB = async () => {
+const connectToDB = async () => {
   mongoose.set("strictQuery", true); // no warning
 
   if (isConnect) {
@@ -13,8 +13,6 @@ export const connectToDB = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URI, {
       dbName: "Dreams",
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
     });
 
     isConnect = true;
@@ -24,3 +22,5 @@ export const connectToDB = async () => {
     console.log(error);
   }
 };
+
+export default connectToDB;

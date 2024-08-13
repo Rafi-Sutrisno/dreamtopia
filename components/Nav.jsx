@@ -38,8 +38,8 @@ const Nav = () => {
         {/* jika diatas 640px maka akan muncul (sm) */}
         {session?.user ? (
           <div className="flex gap-3 md:gap-5">
-            <Link href={"/create-prompt"} className="black_btn">
-              Create Post
+            <Link href={"/create-dream"} className="black_btn">
+              Create Dream
             </Link>
 
             <button type="button" onClick={signOut} className="outline_btn">
@@ -97,11 +97,11 @@ const Nav = () => {
                   My Profile
                 </Link>
                 <Link
-                  href={"/create-prompt"}
+                  href={"/create-dream"}
                   className="dropdown_link"
                   onClick={() => setToggleDrodown(false)}
                 >
-                  Create Prompt
+                  Create Dream
                 </Link>
                 <button
                   type="button"
